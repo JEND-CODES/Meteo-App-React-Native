@@ -28,7 +28,7 @@ constructor (props) {
 
 getData() {
     // Pour cette concaténation ne pas oublier le symbole $ !
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=86f48f582f46de2e7def769dd19cfca8`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid={APIKEY}`)
       .then(response => {return response.json();})
       .then(responseData => {return responseData;})
       .then(data => {this.setState({
